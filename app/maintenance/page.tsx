@@ -31,8 +31,7 @@ export default function MaintenancePage() {
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim()) {
-      // Handle email subscription here
+    if (email?.trim()) {
       setIsSubscribed(true);
       setEmail("");
     }
