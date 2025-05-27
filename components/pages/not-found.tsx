@@ -13,9 +13,14 @@ export default function NotFoundPage() {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (searchQuery.trim()) {
+    const searchValue = searchQuery.trim();
+    if (searchValue) {
       // You can customize this to redirect to your search page
-      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      router.push(
+        `/search?q=${
+          searchValue?.length > 0 ? encodeURIComponent(searchValue) : ""
+        }`
+      );
     }
   };
 
