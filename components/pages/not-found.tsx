@@ -18,7 +18,7 @@ export default function NotFoundPage() {
       // You can customize this to redirect to your search page
       router.push(
         `/search?q=${
-          searchValue?.length > 0 ? encodeURIComponent(searchValue) : ""
+          searchValue?.trim()?.length > 0 ? encodeURIComponent(searchValue) : ""
         }`
       );
     }
