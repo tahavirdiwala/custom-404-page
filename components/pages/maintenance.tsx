@@ -47,7 +47,7 @@ export default function MaintenancePage() {
               <Wrench className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-              We'll Be Back Soon
+              {process.env.NEXT_PUBLIC_MAINTENANCE_TITLE}
             </h1>
           </div>
 
@@ -59,9 +59,11 @@ export default function MaintenancePage() {
                   <Globe className="w-12 h-12 text-blue-600" />
                 </div>
                 <p className="text-sm text-gray-500 px-4">
-                  Maintenance illustration placeholder
+                  {process.env.NEXT_PUBLIC_MAINTENANCE_DESCRIPTION}
                   <br />
-                  <span className="text-xs">Replace with your brand image</span>
+                  <span className="text-xs">
+                    {process.env.NEXT_PUBLIC_MAINTENANCE_SUBTITLE}
+                  </span>
                 </p>
               </div>
             </div>
@@ -70,12 +72,10 @@ export default function MaintenancePage() {
           {/* Description */}
           <div className="max-w-2xl mx-auto space-y-4">
             <p className="text-xl text-gray-600 leading-relaxed">
-              We're currently performing scheduled maintenance to improve your
-              experience. Our team is working hard to get everything back online
-              as quickly as possible.
+              {process.env.NEXT_PUBLIC_MAINTENANCE_DESCRIPTION}
             </p>
             <p className="text-gray-500">
-              Thank you for your patience. We'll be back better than ever!
+              {process.env.NEXT_PUBLIC_MAINTENANCE_DESCRIPTION}
             </p>
           </div>
 
@@ -85,7 +85,7 @@ export default function MaintenancePage() {
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Clock className="w-5 h-5 text-blue-600" />
                 <h3 className="text-lg font-semibold text-gray-900">
-                  Estimated Return Time
+                  {process.env.NEXT_PUBLIC_MAINTENANCE_TITLE}
                 </h3>
               </div>
 
@@ -157,25 +157,25 @@ export default function MaintenancePage() {
           {/* Status Updates */}
           <div className="max-w-2xl mx-auto">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
-              What We're Working On
+              {process.env.NEXT_PUBLIC_MAINTENANCE_TITLE}
             </h3>
             <div className="space-y-3 text-left">
               <div className="flex items-center gap-3 p-3 bg-white rounded-lg border">
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                 <span className="text-gray-700">
-                  Database optimization - Complete
+                  {process.env.NEXT_PUBLIC_MAINTENANCE_DESCRIPTION}
                 </span>
               </div>
               <div className="flex items-center gap-3 p-3 bg-white rounded-lg border">
                 <AlertCircle className="w-5 h-5 text-yellow-500 flex-shrink-0" />
                 <span className="text-gray-700">
-                  Server upgrades - In Progress
+                  {process.env.NEXT_PUBLIC_MAINTENANCE_DESCRIPTION}
                 </span>
               </div>
               <div className="flex items-center gap-3 p-3 bg-white rounded-lg border">
                 <Clock className="w-5 h-5 text-gray-400 flex-shrink-0" />
                 <span className="text-gray-700">
-                  Security enhancements - Pending
+                  {process.env.NEXT_PUBLIC_MAINTENANCE_DESCRIPTION}
                 </span>
               </div>
             </div>
