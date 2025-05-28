@@ -26,10 +26,10 @@ const useCountdown = () => {
         return;
       }
 
+      const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
       const seconds = Math.floor((remaining / 1000) % 60);
       const minutes = Math.floor((remaining / 1000 / 60) % 60);
-      const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
-      const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
 
       setTimeLeft({ days, hours, minutes, seconds });
     }, 1000);
