@@ -12,9 +12,7 @@ export default function Home() {
       process.env.NEXT_PUBLIC_MAINTENANCE_MODE || "false"
     );
     setMaintenanceMode(checkMaintenanceMode);
-    if (maintenanceMode) {
-      router.replace("/maintenance");
-    }
+    if (maintenanceMode) router.replace("/maintenance");
   }, [maintenanceMode]);
 
   return (
