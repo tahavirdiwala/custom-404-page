@@ -24,7 +24,7 @@ export default function Home() {
           name="c1"
           id="c1"
           checked={maintenanceMode}
-          onCheckedChange={() => setMaintenanceMode(!maintenanceMode)}
+          onCheckedChange={() => setMaintenanceMode((prev) => !prev)}
         />
         <p>Maintenance Mode</p>
       </div>

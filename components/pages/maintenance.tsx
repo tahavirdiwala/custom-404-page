@@ -75,7 +75,7 @@ export default function MaintenancePage() {
               {process.env.NEXT_PUBLIC_MAINTENANCE_DESCRIPTION}
             </p>
             <p className="text-gray-500">
-              {process.env.NEXT_PUBLIC_MAINTENANCE_DESCRIPTION}
+              {process.env.NEXT_PUBLIC_MAINTENANCE_BUTTON_TEXT}
             </p>
           </div>
 
