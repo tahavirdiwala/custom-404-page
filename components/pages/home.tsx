@@ -1,7 +1,7 @@
 "use client";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { useMaintenance } from "@/hooks/useMaintenance";
+import { useMaintenance } from "@/hooks";
 
 export default function Home() {
   const maintenance = useMaintenance();
