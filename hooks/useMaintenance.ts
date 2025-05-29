@@ -1,3 +1,4 @@
+"use client";
 import { ROUTES } from "@/lib/constant";
 import { useRouter } from "next/navigation";
 import { useState } from "react";

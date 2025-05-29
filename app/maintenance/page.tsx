@@ -1,5 +1,5 @@
-import MaintenancePage from "@/components/pages/maintenance";
 import { Metadata } from "next";
+import MaintenancePage from "@/components/pages/maintenance";
 
 export const metadata: Metadata = {
   title: "Maintenance",
