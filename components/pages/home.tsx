@@ -1,30 +1,18 @@
 "use client";
-import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { ROUTES } from "@/lib/constant";
-import { useRouter } from "next/navigation";
+import { useMaintenance } from "@/hooks/useMaintenance";
 
 export default function Home() {
-  const [maintenanceMode, setMaintenanceMode] = useState<boolean>(
-    JSON.parse(process.env.NEXT_PUBLIC_MAINTENANCE_MODE || "false")
-  );
-  const router = useRouter();
-
-  const handleToggleMaintenanceMode = (checked: boolean) => {
-    if (checked) {
-      router.replace(ROUTES.MAINTENANCE);
-    }
-    setMaintenanceMode((prev) => !prev);
-  };
+  const maintenance = useMaintenance();
 
   return (
     <div className="flex items-center justify-center gap-2 h-screen">
       <Checkbox
         id="maintenanceMode"
         name="maintenanceMode"
-        checked={maintenanceMode}
-        onCheckedChange={handleToggleMaintenanceMode}
+        checked={maintenance.checked}
+        onCheckedChange={maintenance.handleToggle}
       />
       <Label htmlFor="maintenanceMode">Maintenance Mode</Label>
     </div>
