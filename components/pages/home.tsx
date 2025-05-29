@@ -15,6 +15,10 @@ export default function Home() {
     if (maintenanceMode) router.replace("/maintenance");
   }, [maintenanceMode]);
 
+  const handleToggleMaintenanceMode = () => {
+    setMaintenanceMode((prev) => !prev);
+  };
+
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="flex items-center justify-center gap-2">
@@ -22,9 +26,11 @@ export default function Home() {
           name="c1"
           id="c1"
           checked={maintenanceMode}
-          onCheckedChange={() => setMaintenanceMode((prev) => !prev)}
+          onCheckedChange={handleToggleMaintenanceMode}
         />
-        <p>Maintenance Mode</p>
+        <p className="cursor-pointer" onClick={handleToggleMaintenanceMode}>
+          Maintenance Mode
+        </p>
       </div>
     </div>
   );
