@@ -19,16 +19,14 @@ export default function Home() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="flex items-center justify-center gap-2">
-        <Checkbox
-          id="maintenanceMode"
-          name="maintenanceMode"
-          checked={maintenanceMode}
-          onCheckedChange={handleToggleMaintenanceMode}
-        />
-        <Label htmlFor="maintenanceMode">Maintenance Mode</Label>
-      </div>
+    <div className="flex items-center justify-center gap-2 h-screen">
+      <Checkbox
+        id="maintenanceMode"
+        name="maintenanceMode"
+        checked={maintenanceMode}
+        onCheckedChange={handleToggleMaintenanceMode}
+      />
+      <Label htmlFor="maintenanceMode">Maintenance Mode</Label>
     </div>
   );
 }
