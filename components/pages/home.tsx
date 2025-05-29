@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Checkbox } from "@/components/ui/checkbox";
+import { ROUTES } from "@/lib/constant";
 
 export default function Home() {
   const [maintenanceMode, setMaintenanceMode] = useState(false);
@@ -12,7 +13,7 @@ export default function Home() {
       process.env.NEXT_PUBLIC_MAINTENANCE_MODE || "false"
     );
     setMaintenanceMode(checkMaintenanceMode);
-    if (maintenanceMode) router.replace("/maintenance");
+    if (maintenanceMode) router.replace(ROUTES.MAINTENANCE);
   }, [maintenanceMode]);
 
   const handleToggleMaintenanceMode = () => {
