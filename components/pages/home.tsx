@@ -1,22 +1,19 @@
 "use client";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ROUTES } from "@/lib/constant";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const [maintenanceMode, setMaintenanceMode] = useState(false);
   const router = useRouter();
+  const [maintenanceMode, setMaintenanceMode] = useState<boolean>(
+    JSON.parse(process.env.NEXT_PUBLIC_MAINTENANCE_MODE || "false")
+  );
 
-  useEffect(() => {
-    const checkMaintenanceMode = JSON.parse(
-      process.env.NEXT_PUBLIC_MAINTENANCE_MODE || "false"
-    );
-    setMaintenanceMode(checkMaintenanceMode);
-    if (maintenanceMode) router.replace(ROUTES.MAINTENANCE);
-  }, [maintenanceMode]);
-
-  const handleToggleMaintenanceMode = () => {
+  const handleToggleMaintenanceMode = (checked: boolean) => {
+    if (checked) {
+      router.replace(ROUTES.MAINTENANCE);
+    }
     setMaintenanceMode((prev) => !prev);
   };
 
@@ -29,9 +26,6 @@ export default function Home() {
           checked={maintenanceMode}
           onCheckedChange={handleToggleMaintenanceMode}
         />
-        <p className="cursor-pointer" onClick={handleToggleMaintenanceMode}>
-          Mark this page as Maintenance Mode
-        </p>
       </div>
     </div>
   );
