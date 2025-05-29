@@ -5,10 +5,10 @@ import { ROUTES } from "@/lib/constant";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const router = useRouter();
   const [maintenanceMode, setMaintenanceMode] = useState<boolean>(
     JSON.parse(process.env.NEXT_PUBLIC_MAINTENANCE_MODE || "false")
   );
+  const router = useRouter();
 
   const handleToggleMaintenanceMode = (checked: boolean) => {
     if (checked) {
