@@ -11,7 +11,7 @@ export default function NotFoundPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
 
-  const handleSearch = (event: React.FormEvent) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     const searchValue = searchQuery.trim();
     router.push(
@@ -47,7 +47,7 @@ export default function NotFoundPage() {
 
         {/* Search Form */}
         <div className="max-w-md mx-auto">
-          <form onSubmit={handleSearch} className="flex gap-2">
+          <form onSubmit={handleSubmit} className="flex gap-2">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-4 h-4" />
               <Input
