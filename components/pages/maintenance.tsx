@@ -9,8 +9,6 @@ import {
   Wrench,
   Clock,
   Mail,
-  Twitter,
-  Github,
   Globe,
   CheckCircle,
   AlertCircle,
@@ -201,18 +199,6 @@ export default function MaintenancePage() {
 
             {/* Social Links */}
             <div className="flex justify-center gap-4">
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-blue-600 transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-blue-600 transition-colors"
-              >
-                <Github className="w-5 h-5" />
-              </Link>
               <Link
                 href="#"
                 className="text-gray-400 hover:text-blue-600 transition-colors"
