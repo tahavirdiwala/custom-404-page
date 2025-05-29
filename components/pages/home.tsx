@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 import { ROUTES } from "@/lib/constant";
 import { useRouter } from "next/navigation";
 
@@ -21,11 +22,12 @@ export default function Home() {
     <div className="flex items-center justify-center h-screen">
       <div className="flex items-center justify-center gap-2">
         <Checkbox
-          name="c1"
-          id="c1"
+          id="maintenanceMode"
+          name="maintenanceMode"
           checked={maintenanceMode}
           onCheckedChange={handleToggleMaintenanceMode}
         />
+        <Label htmlFor="maintenanceMode">Maintenance Mode</Label>
       </div>
     </div>
   );
