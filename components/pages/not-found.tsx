@@ -11,8 +11,8 @@ export default function NotFoundPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSearch = (event: React.FormEvent) => {
+    event.preventDefault();
     const searchValue = searchQuery.trim();
     router.push(
       `/search?q=${searchValue ? encodeURIComponent(searchValue) : ""}`
