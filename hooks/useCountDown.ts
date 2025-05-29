@@ -69,4 +69,4 @@ const useCountdown = () => {
   return timeLeft;
 };
 
-export default useCountdown;
+export { useCountdown };
