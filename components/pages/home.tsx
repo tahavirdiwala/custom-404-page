@@ -30,7 +30,7 @@ export default function Home() {
           onCheckedChange={handleToggleMaintenanceMode}
         />
         <p className="cursor-pointer" onClick={handleToggleMaintenanceMode}>
-          Maintenance Mode
+          Mark this as Maintenance Mode
         </p>
       </div>
     </div>
