@@ -40,7 +40,7 @@ const useMaintenance = () => {
   const router = useRouter();
 
   const handleToggle = (checked: boolean) => {
-    if (checked) router.replace(ROUTES.MAINTENANCE);
+    if (checked) router.push(ROUTES.MAINTENANCE);
     setMaintenanceMode((prev) => !prev);
   };
 
