@@ -41,7 +41,7 @@ const useMaintenance = () => {
 
   const handleToggle = (checked: boolean) => {
     if (checked) router.push(ROUTES.MAINTENANCE);
-    setMaintenanceMode((prev) => !prev);
+    setMaintenanceMode(checked);
   };
 
   return { checked: maintenanceMode, handleToggle };
