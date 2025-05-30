@@ -3,7 +3,11 @@ import { ROUTES } from "@/lib/constant";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-function useMaintenance() {
+/**
+ * @description useMaintenance hook
+ * @returns {Object} { checked: boolean, handleToggle: () => void }
+ */
+const useMaintenance = () => {
   const [maintenanceMode, setMaintenanceMode] = useState<boolean>(
     JSON.parse(process.env.NEXT_PUBLIC_MAINTENANCE_MODE || "false")
   );
@@ -17,6 +21,6 @@ function useMaintenance() {
   };
 
   return { checked: maintenanceMode, handleToggle };
-}
+};
 
 export { useMaintenance };
