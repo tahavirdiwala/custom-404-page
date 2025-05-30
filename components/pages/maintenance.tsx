@@ -179,13 +179,13 @@ export default function MaintenancePage() {
           <div className="pt-8 border-t border-gray-200">
             <p className="text-gray-600 mb-4">Need immediate assistance?</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-              <Button variant="outline" asChild>
+              <Button variant="outline">
                 <Link href="mailto:support@yoursite.com">
                   <Mail className="w-4 h-4 mr-2" />
                   Contact Support
                 </Link>
               </Button>
-              <Button variant="outline" asChild>
+              <Button variant="outline">
                 <Link href="/status" target="_blank">
                   <Globe className="w-4 h-4 mr-2" />
                   Status Page
