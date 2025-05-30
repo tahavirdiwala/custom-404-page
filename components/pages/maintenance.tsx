@@ -19,12 +19,9 @@ export default function MaintenancePage() {
   const [isSubscribed, setIsSubscribed] = useState(false);
   const timeLeft = useCountdown();
 
-  const getTimeFormat = useCallback(
-    (key: keyof typeof timeLeft) => {
-      return timeLeft[key]?.toString()?.padStart(2, "0");
-    },
-    [timeLeft]
-  );
+  const getTimeFormat = (key: keyof typeof timeLeft) => {
+    return timeLeft[key]?.toString()?.padStart(2, "0");
+  };
 
   const handleEmailSubmit = (event: React.FormEvent) => {
     event.preventDefault();
